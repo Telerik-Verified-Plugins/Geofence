@@ -42,7 +42,8 @@ module.exports = function(context) {
                 buildSettings = configurations[config].buildSettings;
                 buildSettings['IPHONEOS_DEPLOYMENT_TARGET'] = IOS_DEPLOYMENT_TARGET;
                 buildSettings['EMBEDDED_CONTENT_CONTAINS_SWIFT'] = "YES";
-                buildSettings['LD_RUNPATH_SEARCH_PATHS'] = '"@executable_path/Frameworks"'
+                buildSettings['LD_RUNPATH_SEARCH_PATHS'] = '"@executable_path/Frameworks"';
+                buildSettings['SWIFT_VERSION'] = 2.3;
             }
             console.error('IOS project now has deployment target set as:[' + IOS_DEPLOYMENT_TARGET + '] ...');
             console.error('IOS project option EMBEDDED_CONTENT_CONTAINS_SWIFT set as:[YES] ...');
